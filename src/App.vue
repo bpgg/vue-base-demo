@@ -1,32 +1,71 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <router-view></router-view>
   </div>
 </template>
 
+<script>
+import routes from "@/router/routes";
+// import Layout from "@/views/Layout/index.vue";
+
+export default {
+  components: {
+    // Layout
+  },
+  data() {
+    return {
+      isCollapse: false,
+      asideWidth: 200
+    };
+  },
+  methods: {
+    toogleMenu() {
+      this.isCollapse = this.isCollapse ? false : true;
+    }
+  },
+  watch: {
+    isCollapse: function(newVal) {
+      newVal ? (this.asideWidth = 50) : (this.asideWidth = 200);
+    }
+  },
+  created() {
+    this.menuData = routes;
+  }
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-#nav {
-  padding: 30px;
+.app-header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f1f1f1;
+}
+.aside-menu {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+// .el-menu {
+//   height: calc(100vh - 60px);
+//   overflow-y: auto;
+//   overflow-x: hidden;
+// }
+// .el-menu-vertical-demo::-webkit-scrollbar {
+//   display: none; /* 隐藏滚动条 */
+// }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+.default-icon-style {
+  font-size: 40px;
+  padding: 10px 20px 10px 0;
 }
 </style>
