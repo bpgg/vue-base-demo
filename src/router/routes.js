@@ -26,7 +26,6 @@ const routes = [
     },
     {
         path: "/vmodel",
-
         id: "2",
         meta: {
 
@@ -43,6 +42,29 @@ const routes = [
                 },
                 component: () =>
                     import(/* webpackChunkName: "about" */ "../views/VModelPage.vue")
+            },
+        ],
+        component: Layout
+    },
+    {
+        path: "/md",
+
+        id: "3",
+        meta: {
+
+            name: "markDown 解析",
+            icon: "el-icon-tickets"
+        },
+        children: [
+            {
+                path: "/md/demo01",
+                id: "3.1",
+                meta: {
+                    name: "md_demo01",
+                    icon: "el-icon-tickets"
+                },
+                component: () =>
+                    import(/* webpackChunkName: "about" */ "../views/MarkDownPage.vue")
             },
         ],
         component: Layout

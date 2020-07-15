@@ -18,7 +18,7 @@
         <!-- aside end -->
         <!-- main start -->
 
-        <Main></Main>
+        <Main :asideWidth="asideWidth"></Main>
 
         <!-- main end -->
       </el-container>
@@ -48,5 +48,8 @@ export default {
 <style lang="scss" scoped>
 .el-header {
   padding: 0;
+}
+.aside-menu {
+  height: calc(100vh - 60px);
 }
 </style>

@@ -40,18 +40,6 @@ export default {
   margin: 0;
 }
 
-.app-header {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f1f1f1;
-}
-.aside-menu {
-  height: calc(100vh - 60px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 // .el-menu {
 //   height: calc(100vh - 60px);
 //   overflow-y: auto;
@@ -60,12 +48,4 @@ export default {
 // .el-menu-vertical-demo::-webkit-scrollbar {
 //   display: none; /* 隐藏滚动条 */
 // }
-
-.el-scrollbar__wrap {
-  overflow-x: hidden;
-}
-.default-icon-style {
-  font-size: 40px;
-  padding: 10px 20px 10px 0;
-}
 </style>

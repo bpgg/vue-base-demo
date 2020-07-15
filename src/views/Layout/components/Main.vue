@@ -1,14 +1,13 @@
 <template>
-  <div id="main">
-    <el-main>
-      <router-view></router-view>
-    </el-main>
-  </div>
+  <el-main>
+    <router-view></router-view>
+  </el-main>
 </template>
 
 <script>
 export default {
   name: "Layout",
+  props: ["asideWidth"],
   components: {}
 };
 </script>
