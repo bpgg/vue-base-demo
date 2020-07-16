@@ -69,6 +69,52 @@ const routes = [
         ],
         component: Layout
     },
+    {
+        path: "/upload",
+
+        id: "4",
+        meta: {
+
+            name: "文件上传/导出",
+            icon: "el-icon-tickets"
+        },
+        children: [
+            {
+                path: "/upload/demo01",
+                id: "4.1",
+                meta: {
+                    name: "upload_demo01",
+                    icon: "el-icon-tickets"
+                },
+                component: () =>
+                    import(/* webpackChunkName: "about" */ "../views/Upload/UploadPage.vue")
+            },
+        ],
+        component: Layout
+    },
+    {
+        path: "/table",
+
+        id: "5",
+        meta: {
+
+            name: "表格",
+            icon: "el-icon-tickets"
+        },
+        children: [
+            {
+                path: "/table/demo01",
+                id: "5.1",
+                meta: {
+                    name: "table_demo01",
+                    icon: "el-icon-tickets"
+                },
+                component: () =>
+                    import(/* webpackChunkName: "about" */ "../views/Table/TablePage.vue")
+            },
+        ],
+        component: Layout
+    },
 
 
 

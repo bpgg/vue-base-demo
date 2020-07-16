@@ -63,9 +63,9 @@ export default {
   width: 100%;
   .htmlString-box,
   .markdString-box {
-    // &::-webkit-scrollbar {
-    //   display: none; /* 隐藏滚动条 */
-    // }
+    &::-webkit-scrollbar {
+      display: none; /* 隐藏滚动条 */
+    }
     box-sizing: border-box;
     width: 100%;
     height: 400px;
