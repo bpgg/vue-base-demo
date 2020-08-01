@@ -7,7 +7,7 @@
         <template #default></template>
 
         <template #suf-icon="slotProps">
-          <span v-if="slotProps.value>1">🤮---{{slotProps.value}}</span>
+          <span v-if="slotProps.value>1">slotProps.value&lg;1---{{slotProps.value}}</span>
           <span v-else>🆒---{{slotProps.value}}</span>
         </template>
       </todo-list-item>
@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import TodoList from "@/components/TodoList/TodoList";
-import TodoListItem from "@/components/TodoList/TodoListItem";
+import TodoList from "@/components/common/todoList/TodoList";
+import TodoListItem from "@/components/common/todoList/TodoListItem";
 
 export default {
   name: "TodoListPage",

@@ -8,13 +8,6 @@
         <el-card v-html="htmlString" class="htmlString-box"></el-card>
       </el-col>
     </el-row>
-    <!-- <el-input
-      type="textarea"
-      :autosize="{ minRows: 2, maxRows: 4}"
-      placeholder="请输入内容"
-      v-model="markdString"
-    ></el-input>-->
-    <!-- <div v-html="htmlString"></div> -->
   </div>
 </template>
 

@@ -5,33 +5,7 @@
 </template>
 
 <script>
-import routes from "@/router/routes";
-// import Layout from "@/views/Layout/index.vue";
-
-export default {
-  components: {
-    // Layout
-  },
-  data() {
-    return {
-      isCollapse: false,
-      asideWidth: 200
-    };
-  },
-  methods: {
-    toogleMenu() {
-      this.isCollapse = this.isCollapse ? false : true;
-    }
-  },
-  watch: {
-    isCollapse: function(newVal) {
-      newVal ? (this.asideWidth = 50) : (this.asideWidth = 200);
-    }
-  },
-  created() {
-    this.menuData = routes;
-  }
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -39,13 +13,4 @@ export default {
   padding: 0;
   margin: 0;
 }
-
-// .el-menu {
-//   height: calc(100vh - 60px);
-//   overflow-y: auto;
-//   overflow-x: hidden;
-// }
-// .el-menu-vertical-demo::-webkit-scrollbar {
-//   display: none; /* 隐藏滚动条 */
-// }
 </style>
